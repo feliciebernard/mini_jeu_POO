@@ -47,12 +47,10 @@ while user.life_points >0 && (player1.life_points > 0 || player2.life_points >0)
     user.search_weapon
     puts gets.chomp
     puts ""
-
   elsif answer == "s"
     user.search_health_pack
     puts gets.chomp
     puts ""
-
   elsif answer == "0"
     user.attacks(player1)
     puts ""
@@ -67,7 +65,7 @@ while user.life_points >0 && (player1.life_points > 0 || player2.life_points >0)
 
   puts "Les autres joueurs t'attaquent !"
   puts ""
-  
+
   enemies.each do |player|
     if player.life_points > 0
       player.attacks(user)
@@ -77,7 +75,7 @@ while user.life_points >0 && (player1.life_points > 0 || player2.life_points >0)
 end
 
 puts ""
-puts "La partie et finie"
+puts "La partie est finie"
 
 if user.life_points <= 0
   puts "LOSER ! Tu as perdu..."
